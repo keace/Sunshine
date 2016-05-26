@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView android:text="@string/hello_world"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Today, June 24"
+        android:id="@+id/textViewToday"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="77dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="21&apos;"
+        android:id="@+id/textViewDayTemp"
+        android:layout_below="@+id/textViewToday"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="8&apos;"
+        android:id="@+id/textViewNightTemp"
+        android:layout_below="@+id/textViewDayTemp"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageViewWeather"
+        android:layout_below="@+id/textViewNightTemp"
+        android:layout_centerHorizontal="true"
+        android:src="@android:drawable/ic_lock_idle_low_battery"
+        android:contentDescription="Weather Image"
+        android:minHeight="100dp"
+        android:minWidth="100dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Cloudy"
+        android:id="@+id/textViewWeather"
+        android:layout_below="@+id/imageViewWeather"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>

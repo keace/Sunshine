@@ -1,0 +1,14 @@
+*.iml
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
+/captures
+/app/hs_err_pid5532.log
+/app/hs_err_pid7292.log
+/app/hs_err_pid6656.log
+/app/hs_err_pid7048.log
+/hs_err_pid236.log
+/replay_pid236.log
