@@ -1,26 +1,11 @@
 package ua.kyslytsia.sunshine;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.LayoutInflater;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
         //setContentView(R.layout.app_bar_main);
 
         if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction().add(R.id.container, new PlaceholderFragment()).commit();
+            getSupportFragmentManager().beginTransaction().add(R.id.container, new ForecastFragment()).commit();
         }
 
         /*Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -67,36 +52,5 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    public static class PlaceholderFragment extends Fragment {
-        ArrayList<String> forecast = new ArrayList<>();
-
-        public PlaceholderFragment() {
-        }
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-
-            String[] data = {
-                    "Monday 6/23 - Sunny - 31/17",
-                    "Tuesday 6/24 - Foggy - 21/8",
-                    "Wednesday 6/25 - Cloudy - 22/17",
-                    "Thursday 6/26 - Rainy - 18/11",
-                    "Friday 6/27 - Foggy - 21/10",
-                    "Saturday 6/28 - TRAPPED IN WEATHERSTATION - 23/18",
-                    "Sunday 6/29 - Sunny - 20/7"
-            };
-
-            List<String> weekForecast = new ArrayList<>(Arrays.asList(data));
-            ArrayAdapter<String> forecastAdapter = new ArrayAdapter<>(getContext(), R.layout.list_item_forecast, R.id.list_item_forecast_textview, weekForecast);
-
-            //Get a reference to ListView and attach ArrayAdapter
-            ListView listView = (ListView) rootView.findViewById(R.id.listview_forecast);
-            listView.setAdapter(forecastAdapter);
-
-            return rootView;
-        }
     }
 }
